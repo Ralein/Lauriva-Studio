@@ -525,9 +525,9 @@ void main() {
       );
       await tester.pumpAndSettle();
 
-      // Now on Forensics tab (1) with forensic scan mode
+      // Forensics is not part of this app: the tab stays put, scan mode is still applied
       indexedStack = tester.widget<IndexedStack>(find.byType(IndexedStack));
-      expect(indexedStack.index, 1);
+      expect(indexedStack.index, 0);
       expect(plagiarism.scanMode, ForensicScanMode.forensic);
 
       // Dispatch 'lauriva_history'

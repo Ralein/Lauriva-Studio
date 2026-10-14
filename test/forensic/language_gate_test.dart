@@ -34,7 +34,9 @@ void main() {
       final english = rows.where((l) => LanguageDetector.isEnglish((jsonDecode(l) as Map)['text'] as String)).length;
       expect(english / 200, greaterThanOrEqualTo(0.99), reason: f);
     }
-  });
+  }, skip: File('tool/eval/data/modern_frontier_test.jsonl').existsSync()
+      ? false
+      : 'needs tool/eval data, which is not part of this app');
 
   test('text with no letters is not treated as English', () {
     expect(LanguageDetector.isEnglish('12345 ... !!!'), isFalse);
