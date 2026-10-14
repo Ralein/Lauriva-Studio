@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Lauriva: AI Writing Studio</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --text-main: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --border: #30363d;
+      --tag-bg: #1f2937;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8fa;
+        --card-bg: #ffffff;
+        --text-main: #1f2328;
+        --text-muted: #656d76;
+        --accent: #0969da;
+        --border: #d0d7de;
+        --tag-bg: #eaeef2;
+      }
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      background-color: var(--bg);
+      color: var(--text-main);
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      padding: 36px 44px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    p, li {
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background-color: var(--tag-bg);
+      color: var(--text-muted);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span class="badge">Lauriva: AI Writing Studio</span>
+      <span class="badge">Package: com.lauriva.app</span>
+      <br><br>
+      <strong>Effective Date:</strong> October 1, 2026
+    </div>
+
+    <p>
+      Welcome to <strong>Lauriva: AI Writing Studio</strong> ("we", "our", or "the App"), developed by Ralein Nova. 
+      We respect your privacy and are committed to transparent and secure handling of your data. This Privacy Policy 
+      discloses how information is accessed, collected, and handled when you use the Lauriva application.
+    </p>
+
+    <h2>1. Information We Process</h2>
+    <ul>
+      <li><strong>User-Provided Text:</strong> Text and documents you paste or type into Lauriva (for humanizing, AI detection, translation, rewriting, or tone adjustment) are processed strictly in memory to deliver the requested output. We do not store, retain, or sell your submitted text, nor do we use your inputs to train proprietary AI models.</li>
+      <li><strong>On-Device Offline Forensics:</strong> Stylometric calculations, linguistic metrics, and on-device neural AI detection run locally on your device via quantized ONNX models. This content never leaves your phone for analysis.</li>
+      <li><strong>Speech & Audio:</strong> When you use voice dictation, audio is accessed in real time strictly to transcribe speech into text via your device's native speech recognition. Audio recordings are never saved, stored, or transmitted to our servers.</li>
+    </ul>
+
+    <h2>2. Device Permissions Used</h2>
+    <ul>
+      <li><strong>Microphone (<code>android.permission.RECORD_AUDIO</code>):</strong> Required only when you explicitly tap the microphone button for speech-to-text dictation. Audio input ceases as soon as speech recognition stops.</li>
+      <li><strong>Internet Access (<code>android.permission.INTERNET</code>):</strong> Used to communicate with user-configured AI cloud providers (e.g. OpenAI, Anthropic, Gemini, Groq) and to query academic/web indexing APIs for literature plagiarism citations.</li>
+      <li><strong>Bluetooth (<code>android.permission.BLUETOOTH_CONNECT</code>):</strong> Used optionally to route speech input and audio playback to connected wireless headsets or earbuds.</li>
+    </ul>
+
+    <h2>3. API Keys & Third-Party AI Services</h2>
+    <p>
+      Lauriva allows users to optionally connect their own API keys for services such as OpenAI, Anthropic Claude, Google Gemini, Groq, or OpenRouter. 
+    </p>
+    <ul>
+      <li>Your API keys are stored exclusively on your device using hardware-backed encrypted storage (Android Keystore / <code>flutter_secure_storage</code>).</li>
+      <li>API keys are never transmitted to any central Lauriva server.</li>
+      <li>When you trigger a cloud transformation, your prompt is sent directly from your device to the chosen third-party AI provider over TLS/HTTPS, subject to their respective privacy policies.</li>
+      <li><strong>Online source check</strong> (plagiarism scans; on by default and can be turned off in the scan settings): to find matching sources, the app sends a few short excerpts (about 25 words each, with emails, links and long numbers removed) from the text you scan, never the whole document, directly from your device to public search services: Wikipedia, Wikinews, Bing, Brave Search, Exa, DuckDuckGo, OpenAlex, Crossref, DOAJ, PubMed, Europe PMC, Semantic Scholar, arXiv, Stack Exchange and Hacker News (Algolia). These services receive your IP address and the excerpt, subject to their own privacy policies. When verifying matches, the app may also ask Jina Reader (r.jina.ai) or Exa to fetch the public pages that the search already returned, so those services learn the URLs of matched public pages (not your text), and it may fetch a page directly from your device. With online search off, your text is never sent anywhere and scans use only the offline source index. That index (about 24 MB, hashed fingerprints only, no source text) is downloaded once over Wi-Fi from a GitHub release and kept on your device; GitHub sees your IP address for that download, but none of your text.</li>
+    </ul>
+
+    <h2>4. Data Retention & Sharing</h2>
+    <p>
+      Lauriva does not operate centralized user databases, does not require an account or login, and does not sell or share personal data with data brokers or advertising networks.
+    </p>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>
+      Lauriva is not targeted at children under the age of 13, and we do not knowingly collect personal information from children.
+    </p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>
+      We may update our Privacy Policy periodically. Any updates will be reflected on this page with an updated effective date.
+    </p>
+
+    <h2>7. Contact Information</h2>
+    <p>
+      If you have questions or suggestions regarding this Privacy Policy, please contact:
+    </p>
+    <ul>
+      <li><strong>Developer:</strong> Ralein Nova</li>
+      <li><strong>Project:</strong> Lauriva: AI Writing Studio</li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/Ralein/Lauriva-Mobile" style="color: var(--accent);">github.com/Ralein/Lauriva-Mobile</a></li>
+    </ul>
+
+    <footer>
+      &copy; 2026 Lauriva Studio · All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

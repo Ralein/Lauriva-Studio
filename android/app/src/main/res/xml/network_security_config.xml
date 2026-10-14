@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Lauriva's "Custom Provider" LLM setting (see LlmProvider.custom_freellmapi) is built
+  to talk to self-hosted, plaintext-HTTP gateways on the user's own machine or LAN —
+  Ollama (http://localhost:11434/v1), LM Studio, or a FreeLLMAPI router. Android 9+
+  (API 28+) blocks cleartext traffic by default, which would silently break that
+  advertised feature on real devices even though it works in a dev sandbox. Every
+  built-in hosted provider in LlmProvider.allProviders uses an https:// baseUrl, so
+  this override only takes effect for the plaintext local endpoints users opt into.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

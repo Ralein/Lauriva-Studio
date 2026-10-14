@@ -1,0 +1,412 @@
+{
+  "modelVersion": "omni_p3_int8",
+  "trainingPhase": "p3",
+  "winning_quantization": "fp32",
+  "platt_a": 1.5788069711822486,
+  "platt_b": 0.3310816362268462,
+  "optimal_threshold": 0.7339442712844781,
+  "target_human_fpr": 0.01,
+  "calibration_fit_on": "cal split (600 rows, fp32 ONNX scores, 512-token window)",
+  "holdout_metrics": {
+    "roc_auc": 0.9879444444444444,
+    "tpr_at_1fpr": 0.8466666666666667,
+    "tpr_at_5fpr": 0.9366666666666666,
+    "tpr_at_threshold": 0.92,
+    "human_fpr_at_threshold": 0.03333333333333333,
+    "ece": 0.025920995169394105,
+    "accuracy": 0.9433333333333334,
+    "f1_score": 0.9419795221843004,
+    "esl_disparate_impact_ratio": null
+  },
+  "holdout_ci95": {
+    "roc_auc": [
+      0.9801858524641313,
+      0.9938550186699857
+    ],
+    "tpr_at_1fpr": [
+      0.7441089034394521,
+      0.9050927622537792
+    ],
+    "tpr_at_threshold": [
+      0.8861198702644264,
+      0.95
+    ],
+    "human_fpr_at_threshold": [
+      0.016286644951140065,
+      0.05479562527618206
+    ]
+  },
+  "holdout_rows": 600,
+  "torch_fp32_full_holdout": {
+    "roc_auc": 0.9843794683401338,
+    "tpr_at_1fpr": 0.8221859706362153,
+    "tpr_at_threshold": 0.90775619160611,
+    "human_fpr_at_threshold": 0.038228735266008285,
+    "ece": 0.01039079503353687
+  },
+  "breakdown": {
+    "source": {
+      "legacy:coverage_test:coai_bench_arxiv": {
+        "n": 87,
+        "fpr": 0.0805
+      },
+      "legacy:modern_train:hape_fiction_human": {
+        "n": 57,
+        "fpr": 0.0175
+      },
+      "legacy:train:raid_abstracts_none": {
+        "n": 30,
+        "tpr": 1.0,
+        "fpr": 0.0,
+        "auc": 1.0
+      },
+      "legacy:modern_train:hape_spoken_ai": {
+        "n": 24,
+        "tpr": 1.0
+      },
+      "legacy:modern_train:hape_blog_ai": {
+        "n": 22,
+        "tpr": 0.9091
+      },
+      "legacy:diverse_train:hape_spoken_human": {
+        "n": 19,
+        "fpr": 0.0
+      },
+      "legacy:modern_train:hape_news_ai": {
+        "n": 18,
+        "tpr": 1.0
+      },
+      "legacy:modern_train:hape_tv_movie_ai": {
+        "n": 18,
+        "tpr": 0.9444
+      },
+      "legacy:modern_train:hape_academic_ai": {
+        "n": 14,
+        "tpr": 1.0
+      },
+      "legacy:coverage_test:ivypanda_essay": {
+        "n": 13,
+        "tpr": 1.0
+      },
+      "legacy:modern_train:hape_fiction_ai": {
+        "n": 12,
+        "tpr": 0.9167
+      },
+      "legacy:diverse_train:arxiv_cond_human": {
+        "n": 11,
+        "fpr": 0.0909
+      },
+      "legacy:academic_train:arxiv_solv_human": {
+        "n": 10,
+        "fpr": 0.0
+      },
+      "legacy:modern_test:hape_news_human": {
+        "n": 10,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_gr_human": {
+        "n": 9,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_hep_ai": {
+        "n": 9,
+        "tpr": 0.8889
+      },
+      "legacy:diverse_train:arxiv_astro_human": {
+        "n": 9,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_adap_human": {
+        "n": 8,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_nlin_human": {
+        "n": 8,
+        "fpr": 0.125
+      },
+      "legacy:modern_test:hape_fiction_ai": {
+        "n": 8,
+        "tpr": 0.875
+      },
+      "legacy:modern_test:hape_news_ai": {
+        "n": 8,
+        "tpr": 1.0
+      },
+      "legacy:modern_val:hape_news_human": {
+        "n": 8,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_hep_human": {
+        "n": 7,
+        "fpr": 0.0
+      },
+      "legacy:train:hc3_wiki_csai_human": {
+        "n": 7,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_nucl_human": {
+        "n": 6,
+        "fpr": 0.0
+      },
+      "legacy:academic_train:arxiv_quant_ai": {
+        "n": 6,
+        "tpr": 0.8333
+      },
+      "legacy:diverse_train:arxiv_math_human": {
+        "n": 6,
+        "fpr": 0.0
+      },
+      "legacy:diverse_train:hape_spoken_ai": {
+        "n": 6,
+        "tpr": 1.0
+      },
+      "legacy:academic_train:arxiv_cond_ai": {
+        "n": 5,
+        "tpr": 0.8
+      },
+      "legacy:diverse_train:hape_blog_ai": {
+        "n": 5,
+        "tpr": 0.8
+      },
+      "legacy:modern_frontier_test:coai_arxiv_paraphrase": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:modern_test:hape_academic_ai": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:modern_test:hape_blog_ai": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:modern_test:hape_spoken_ai": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:academic_train:arxiv_astro_ai": {
+        "n": 4,
+        "tpr": 0.75
+      },
+      "legacy:diverse_train:hape_academic_ai": {
+        "n": 4,
+        "tpr": 0.75
+      },
+      "legacy:academic_train:arxiv_chao_ai": {
+        "n": 3,
+        "tpr": 1.0
+      },
+      "legacy:academic_train:arxiv_chem_ai": {
+        "n": 3,
+        "tpr": 1.0
+      },
+      "legacy:academic_train:arxiv_cmp_ai": {
+        "n": 3,
+        "tpr": 1.0
+      },
+      "legacy:academic_train:arxiv_patt_ai": {
+        "n": 3,
+        "tpr": 1.0
+      }
+    },
+    "generator": {
+      "human": {
+        "n": 300,
+        "fpr": 0.0333
+      },
+      "legacy:gpt-oss-120b": {
+        "n": 108,
+        "tpr": 0.8704
+      },
+      "legacy:gpt-4o": {
+        "n": 74,
+        "tpr": 0.973
+      },
+      "legacy:llama-3-8b-instruct": {
+        "n": 73,
+        "tpr": 0.9452
+      },
+      "legacy:llama-3-13b-instruct": {
+        "n": 10,
+        "tpr": 1.0
+      },
+      "legacy:gpt-4o-mini": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:llama-3-70b-instruct": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:mpt": {
+        "n": 5,
+        "tpr": 1.0
+      },
+      "legacy:nemotron-3-super": {
+        "n": 4,
+        "tpr": 0.75
+      },
+      "legacy:gemma-4-31b": {
+        "n": 3,
+        "tpr": 1.0
+      },
+      "legacy:gpt-4.1": {
+        "n": 2,
+        "tpr": 1.0
+      },
+      "legacy:gpt-oss-20b": {
+        "n": 2,
+        "tpr": 0.0
+      },
+      "legacy:mistral-chat": {
+        "n": 2,
+        "tpr": 1.0
+      },
+      "legacy:nemotron-3-ultra": {
+        "n": 2,
+        "tpr": 0.5
+      },
+      "legacy:Claude Opus 4.5": {
+        "n": 1,
+        "tpr": 1.0
+      },
+      "legacy:Claude Sonnet 4.5": {
+        "n": 1,
+        "tpr": 1.0
+      },
+      "legacy:Gemini 3 Pro": {
+        "n": 1,
+        "tpr": 1.0
+      },
+      "legacy:deepseek-chat": {
+        "n": 1,
+        "tpr": 1.0
+      },
+      "legacy:mistral": {
+        "n": 1,
+        "tpr": 1.0
+      }
+    },
+    "domain": {
+      "academic": {
+        "n": 309,
+        "tpr": 0.8768,
+        "fpr": 0.0526,
+        "auc": 0.9745
+      },
+      "other": {
+        "n": 242,
+        "tpr": 0.9466,
+        "fpr": 0.009,
+        "auc": 0.994
+      },
+      "news": {
+        "n": 49,
+        "tpr": 1.0,
+        "fpr": 0.0,
+        "auc": 1.0
+      }
+    },
+    "attack": {
+      "none": {
+        "n": 391,
+        "tpr": 0.9266,
+        "fpr": 0.0327,
+        "auc": 0.986
+      },
+      "paraphrase": {
+        "n": 45,
+        "tpr": 0.8222
+      },
+      "whitespace": {
+        "n": 43,
+        "tpr": 1.0,
+        "fpr": 0.0,
+        "auc": 1.0
+      },
+      "homoglyph": {
+        "n": 42,
+        "tpr": 1.0,
+        "fpr": 0.0833,
+        "auc": 0.9954
+      },
+      "typo": {
+        "n": 38,
+        "tpr": 1.0,
+        "fpr": 0.0,
+        "auc": 1.0
+      },
+      "shuffle": {
+        "n": 29,
+        "tpr": 0.9286,
+        "fpr": 0.0667,
+        "auc": 0.9905
+      },
+      "mixed": {
+        "n": 12,
+        "tpr": 0.8333
+      }
+    }
+  },
+  "drift_vs_fp32": null,
+  "attribution_classes": {
+    "0": "Human Ground-Truth",
+    "1": "OpenAI GPT Family",
+    "2": "Frontier Reasoning (o-series/R1-style)",
+    "3": "Anthropic Claude Family",
+    "4": "Google Gemini Family",
+    "5": "Open-Weights & Other"
+  },
+  "max_context_length": 8192,
+  "eval_window_tokens": 512,
+  "tokenizer_sha256": "6fc70dfad42ab734cd6f473f5ef9e3883890989fc2fd503eee0dd021ece57360",
+  "training_data_manifest_sha256": "593825621b2e4703eaf9fbc9430dd278d198a9a83d636a458c9aa48a1b1e3c9a",
+  "training_data_files": {
+    "train": {
+      "path": "/kaggle/input/lauriva-omni-p3-train/train.jsonl",
+      "sha256": "b4cbac33a37104a6a89dd5c94c4c94bd2b1bd8e5e8d7504c656afe4dc6598fa4",
+      "rows": 11013
+    },
+    "cal": {
+      "path": "/kaggle/input/lauriva-omni-p3-cal/cal.jsonl",
+      "sha256": "f443336f6a66686ac168162bef28e1b18d43e41d5c03794d2c2794b59804dd81",
+      "rows": 927
+    },
+    "holdout": {
+      "path": "/kaggle/input/lauriva-omni-p3-cal/holdout.jsonl",
+      "sha256": "e30ef8cd2fe66c79d5a06dd3e84d2d548a0589682c14b7f43cddd843407b1aba",
+      "rows": 9989
+    }
+  },
+  "best_step": 742,
+  "total_steps": 742,
+  "seed": 42,
+  "hyperparameters": {
+    "epochs": 2,
+    "lr": 2.8e-05,
+    "attr_loss_weight": 0.15,
+    "focal_gamma": 2.0,
+    "awp": true,
+    "crop_tokens": [
+      128,
+      1024
+    ],
+    "token_budget": 12288,
+    "hard_mining": true
+  },
+  "shipped_artifact": {
+    "file": "lauvira_omni_detector.onnx.gz",
+    "format": "int8 per-channel weights (MatMulConstBOnly) + fp16-stored mlp/Wo weights",
+    "size_mb_uncompressed": 170.1,
+    "parity_vs_fp32_100_bench_rows": {
+      "auc": 0.966,
+      "fp32_auc": 0.968,
+      "tpr_at_1pct_fpr": 0.8,
+      "fp32_tpr_at_1pct_fpr": 0.77,
+      "logit_drift_mean": 0.18,
+      "logit_drift_max": 0.64
+    },
+    "loads_on_app_ort": "1.15.1 (verified)",
+    "note": "The app applies the stack in FusionConfig (neural coef 1.5043, bias 0.9102), not this Platt; see docs/OMNI_PHASE3_TRAINING_PLAN.md"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "version": "stylometric_refit_2026-10-05",
+  "aiProbabilityThresholds": {
+    "clean": 20.0,
+    "low": 36.0,
+    "moderate": 65.0,
+    "high": 85.0
+  },
+  "domainCalibration": {
+    "academic": 0.8,
+    "technical": 0.85,
+    "legal": 0.78,
+    "medical": 0.78,
+    "generalProse": 1.0,
+    "creative": 1.05
+  },
+  "signalWeights": {
+    "perplexity": 1.1,
+    "burstiness": 1.25,
+    "structural": 1.2,
+    "homoglyph": 2.0,
+    "styleShift": 1.2,
+    "predictability": 1.05,
+    "watermark": 1.8
+  },
+  "plattCalibration": {
+    "a": 0.218,
+    "b": 0.353,
+    "version": "stylometric_refit_2026-10-05"
+  },
+  "uncertaintyZone": {
+    "lowerBound": 20.0,
+    "upperBound": 42.0,
+    "message": "The available evidence is insufficient for a reliable determination."
+  }
+}

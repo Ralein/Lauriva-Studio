@@ -1,0 +1,1478 @@
+{
+  "timestamp": "2026-10-05 10:52:21",
+  "architecture": "answerdotai/ModernBERT-base (8192 context)",
+  "eval_window_tokens": 512,
+  "same_rows": {
+    "holdout": 600,
+    "cal": 600
+  },
+  "fp32": {
+    "label": "fp32",
+    "n_holdout": 600,
+    "n_cal": 600,
+    "roc_auc": 0.9879444444444444,
+    "tpr_at_1fpr": 0.8466666666666667,
+    "tpr_at_5fpr": 0.9366666666666666,
+    "platt_a": 1.5788069711822486,
+    "platt_b": 0.3310816362268462,
+    "optimal_threshold": 0.7339442712844781,
+    "target_human_fpr": 0.01,
+    "tpr_at_threshold": 0.92,
+    "human_fpr_at_threshold": 0.03333333333333333,
+    "accuracy": 0.9433333333333334,
+    "f1_score": 0.9419795221843004,
+    "ece": 0.025920995169394105,
+    "brier": 0.042156560620120645,
+    "esl_fpr": NaN,
+    "native_fpr": 0.03333333333333333,
+    "esl_disparate_impact_ratio": null,
+    "breakdown": {
+      "source": {
+        "legacy:coverage_test:coai_bench_arxiv": {
+          "n": 87,
+          "fpr": 0.0805
+        },
+        "legacy:modern_train:hape_fiction_human": {
+          "n": 57,
+          "fpr": 0.0175
+        },
+        "legacy:train:raid_abstracts_none": {
+          "n": 30,
+          "tpr": 1.0,
+          "fpr": 0.0,
+          "auc": 1.0
+        },
+        "legacy:modern_train:hape_spoken_ai": {
+          "n": 24,
+          "tpr": 1.0
+        },
+        "legacy:modern_train:hape_blog_ai": {
+          "n": 22,
+          "tpr": 0.9091
+        },
+        "legacy:diverse_train:hape_spoken_human": {
+          "n": 19,
+          "fpr": 0.0
+        },
+        "legacy:modern_train:hape_news_ai": {
+          "n": 18,
+          "tpr": 1.0
+        },
+        "legacy:modern_train:hape_tv_movie_ai": {
+          "n": 18,
+          "tpr": 0.9444
+        },
+        "legacy:modern_train:hape_academic_ai": {
+          "n": 14,
+          "tpr": 1.0
+        },
+        "legacy:coverage_test:ivypanda_essay": {
+          "n": 13,
+          "tpr": 1.0
+        },
+        "legacy:modern_train:hape_fiction_ai": {
+          "n": 12,
+          "tpr": 0.9167
+        },
+        "legacy:diverse_train:arxiv_cond_human": {
+          "n": 11,
+          "fpr": 0.0909
+        },
+        "legacy:academic_train:arxiv_solv_human": {
+          "n": 10,
+          "fpr": 0.0
+        },
+        "legacy:modern_test:hape_news_human": {
+          "n": 10,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_gr_human": {
+          "n": 9,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_hep_ai": {
+          "n": 9,
+          "tpr": 0.8889
+        },
+        "legacy:diverse_train:arxiv_astro_human": {
+          "n": 9,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_adap_human": {
+          "n": 8,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_nlin_human": {
+          "n": 8,
+          "fpr": 0.125
+        },
+        "legacy:modern_test:hape_fiction_ai": {
+          "n": 8,
+          "tpr": 0.875
+        },
+        "legacy:modern_test:hape_news_ai": {
+          "n": 8,
+          "tpr": 1.0
+        },
+        "legacy:modern_val:hape_news_human": {
+          "n": 8,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_hep_human": {
+          "n": 7,
+          "fpr": 0.0
+        },
+        "legacy:train:hc3_wiki_csai_human": {
+          "n": 7,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_nucl_human": {
+          "n": 6,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_quant_ai": {
+          "n": 6,
+          "tpr": 0.8333
+        },
+        "legacy:diverse_train:arxiv_math_human": {
+          "n": 6,
+          "fpr": 0.0
+        },
+        "legacy:diverse_train:hape_spoken_ai": {
+          "n": 6,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_cond_ai": {
+          "n": 5,
+          "tpr": 0.8
+        },
+        "legacy:diverse_train:hape_blog_ai": {
+          "n": 5,
+          "tpr": 0.8
+        },
+        "legacy:modern_frontier_test:coai_arxiv_paraphrase": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_academic_ai": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_blog_ai": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_spoken_ai": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_astro_ai": {
+          "n": 4,
+          "tpr": 0.75
+        },
+        "legacy:diverse_train:hape_academic_ai": {
+          "n": 4,
+          "tpr": 0.75
+        },
+        "legacy:academic_train:arxiv_chao_ai": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_chem_ai": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_cmp_ai": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_patt_ai": {
+          "n": 3,
+          "tpr": 1.0
+        }
+      },
+      "generator": {
+        "human": {
+          "n": 300,
+          "fpr": 0.0333
+        },
+        "legacy:gpt-oss-120b": {
+          "n": 108,
+          "tpr": 0.8704
+        },
+        "legacy:gpt-4o": {
+          "n": 74,
+          "tpr": 0.973
+        },
+        "legacy:llama-3-8b-instruct": {
+          "n": 73,
+          "tpr": 0.9452
+        },
+        "legacy:llama-3-13b-instruct": {
+          "n": 10,
+          "tpr": 1.0
+        },
+        "legacy:gpt-4o-mini": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:llama-3-70b-instruct": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:mpt": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:nemotron-3-super": {
+          "n": 4,
+          "tpr": 0.75
+        },
+        "legacy:gemma-4-31b": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:gpt-4.1": {
+          "n": 2,
+          "tpr": 1.0
+        },
+        "legacy:gpt-oss-20b": {
+          "n": 2,
+          "tpr": 0.0
+        },
+        "legacy:mistral-chat": {
+          "n": 2,
+          "tpr": 1.0
+        },
+        "legacy:nemotron-3-ultra": {
+          "n": 2,
+          "tpr": 0.5
+        },
+        "legacy:Claude Opus 4.5": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:Claude Sonnet 4.5": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:Gemini 3 Pro": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:deepseek-chat": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:mistral": {
+          "n": 1,
+          "tpr": 1.0
+        }
+      },
+      "domain": {
+        "academic": {
+          "n": 309,
+          "tpr": 0.8768,
+          "fpr": 0.0526,
+          "auc": 0.9745
+        },
+        "other": {
+          "n": 242,
+          "tpr": 0.9466,
+          "fpr": 0.009,
+          "auc": 0.994
+        },
+        "news": {
+          "n": 49,
+          "tpr": 1.0,
+          "fpr": 0.0,
+          "auc": 1.0
+        }
+      },
+      "attack": {
+        "none": {
+          "n": 391,
+          "tpr": 0.9266,
+          "fpr": 0.0327,
+          "auc": 0.986
+        },
+        "paraphrase": {
+          "n": 45,
+          "tpr": 0.8222
+        },
+        "whitespace": {
+          "n": 43,
+          "tpr": 1.0,
+          "fpr": 0.0,
+          "auc": 1.0
+        },
+        "homoglyph": {
+          "n": 42,
+          "tpr": 1.0,
+          "fpr": 0.0833,
+          "auc": 0.9954
+        },
+        "typo": {
+          "n": 38,
+          "tpr": 1.0,
+          "fpr": 0.0,
+          "auc": 1.0
+        },
+        "shuffle": {
+          "n": 29,
+          "tpr": 0.9286,
+          "fpr": 0.0667,
+          "auc": 0.9905
+        },
+        "mixed": {
+          "n": 12,
+          "tpr": 0.8333
+        }
+      }
+    },
+    "ci95": {
+      "roc_auc": [
+        0.9801858524641313,
+        0.9938550186699857
+      ],
+      "tpr_at_1fpr": [
+        0.7441089034394521,
+        0.9050927622537792
+      ],
+      "tpr_at_threshold": [
+        0.8861198702644264,
+        0.95
+      ],
+      "human_fpr_at_threshold": [
+        0.016286644951140065,
+        0.05479562527618206
+      ]
+    },
+    "attribution_accuracy": 0.8610169491525423,
+    "mean_latency_ms": 331.46638741167294,
+    "file_size_mb": 596.716603
+  },
+  "int8": {
+    "label": "int8",
+    "n_holdout": 600,
+    "n_cal": 600,
+    "roc_auc": 0.7707777777777777,
+    "tpr_at_1fpr": 0.06,
+    "tpr_at_5fpr": 0.22333333333333333,
+    "platt_a": 10.395664731889392,
+    "platt_b": 90.50182771923336,
+    "optimal_threshold": 0.9455903075762875,
+    "target_human_fpr": 0.01,
+    "tpr_at_threshold": 0.10666666666666667,
+    "human_fpr_at_threshold": 0.023333333333333334,
+    "accuracy": 0.5416666666666666,
+    "f1_score": 0.1887905604719764,
+    "ece": 0.04450418301425665,
+    "brier": 0.19756125192986573,
+    "esl_fpr": NaN,
+    "native_fpr": 0.023333333333333334,
+    "esl_disparate_impact_ratio": null,
+    "breakdown": {
+      "source": {
+        "legacy:coverage_test:coai_bench_arxiv": {
+          "n": 87,
+          "fpr": 0.0345
+        },
+        "legacy:modern_train:hape_fiction_human": {
+          "n": 57,
+          "fpr": 0.0351
+        },
+        "legacy:train:raid_abstracts_none": {
+          "n": 30,
+          "tpr": 0.125,
+          "fpr": 0.0,
+          "auc": 0.7216
+        },
+        "legacy:modern_train:hape_spoken_ai": {
+          "n": 24,
+          "tpr": 0.0833
+        },
+        "legacy:modern_train:hape_blog_ai": {
+          "n": 22,
+          "tpr": 0.1818
+        },
+        "legacy:diverse_train:hape_spoken_human": {
+          "n": 19,
+          "fpr": 0.0526
+        },
+        "legacy:modern_train:hape_news_ai": {
+          "n": 18,
+          "tpr": 0.2778
+        },
+        "legacy:modern_train:hape_tv_movie_ai": {
+          "n": 18,
+          "tpr": 0.1111
+        },
+        "legacy:modern_train:hape_academic_ai": {
+          "n": 14,
+          "tpr": 0.0714
+        },
+        "legacy:coverage_test:ivypanda_essay": {
+          "n": 13,
+          "tpr": 0.1538
+        },
+        "legacy:modern_train:hape_fiction_ai": {
+          "n": 12,
+          "tpr": 0.3333
+        },
+        "legacy:diverse_train:arxiv_cond_human": {
+          "n": 11,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_solv_human": {
+          "n": 10,
+          "fpr": 0.0
+        },
+        "legacy:modern_test:hape_news_human": {
+          "n": 10,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_gr_human": {
+          "n": 9,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_hep_ai": {
+          "n": 9,
+          "tpr": 0.0
+        },
+        "legacy:diverse_train:arxiv_astro_human": {
+          "n": 9,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_adap_human": {
+          "n": 8,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_nlin_human": {
+          "n": 8,
+          "fpr": 0.0
+        },
+        "legacy:modern_test:hape_fiction_ai": {
+          "n": 8,
+          "tpr": 0.0
+        },
+        "legacy:modern_test:hape_news_ai": {
+          "n": 8,
+          "tpr": 0.125
+        },
+        "legacy:modern_val:hape_news_human": {
+          "n": 8,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_hep_human": {
+          "n": 7,
+          "fpr": 0.0
+        },
+        "legacy:train:hc3_wiki_csai_human": {
+          "n": 7,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_nucl_human": {
+          "n": 6,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_quant_ai": {
+          "n": 6,
+          "tpr": 0.0
+        },
+        "legacy:diverse_train:arxiv_math_human": {
+          "n": 6,
+          "fpr": 0.0
+        },
+        "legacy:diverse_train:hape_spoken_ai": {
+          "n": 6,
+          "tpr": 0.1667
+        },
+        "legacy:academic_train:arxiv_cond_ai": {
+          "n": 5,
+          "tpr": 0.0
+        },
+        "legacy:diverse_train:hape_blog_ai": {
+          "n": 5,
+          "tpr": 0.2
+        },
+        "legacy:modern_frontier_test:coai_arxiv_paraphrase": {
+          "n": 5,
+          "tpr": 0.2
+        },
+        "legacy:modern_test:hape_academic_ai": {
+          "n": 5,
+          "tpr": 0.0
+        },
+        "legacy:modern_test:hape_blog_ai": {
+          "n": 5,
+          "tpr": 0.4
+        },
+        "legacy:modern_test:hape_spoken_ai": {
+          "n": 5,
+          "tpr": 0.0
+        },
+        "legacy:academic_train:arxiv_astro_ai": {
+          "n": 4,
+          "tpr": 0.0
+        },
+        "legacy:diverse_train:hape_academic_ai": {
+          "n": 4,
+          "tpr": 0.0
+        },
+        "legacy:academic_train:arxiv_chao_ai": {
+          "n": 3,
+          "tpr": 0.0
+        },
+        "legacy:academic_train:arxiv_chem_ai": {
+          "n": 3,
+          "tpr": 0.0
+        },
+        "legacy:academic_train:arxiv_cmp_ai": {
+          "n": 3,
+          "tpr": 0.3333
+        },
+        "legacy:academic_train:arxiv_patt_ai": {
+          "n": 3,
+          "tpr": 0.0
+        }
+      },
+      "generator": {
+        "human": {
+          "n": 300,
+          "fpr": 0.0233
+        },
+        "legacy:gpt-oss-120b": {
+          "n": 108,
+          "tpr": 0.0741
+        },
+        "legacy:gpt-4o": {
+          "n": 74,
+          "tpr": 0.1757
+        },
+        "legacy:llama-3-8b-instruct": {
+          "n": 73,
+          "tpr": 0.1096
+        },
+        "legacy:llama-3-13b-instruct": {
+          "n": 10,
+          "tpr": 0.2
+        },
+        "legacy:gpt-4o-mini": {
+          "n": 5,
+          "tpr": 0.0
+        },
+        "legacy:llama-3-70b-instruct": {
+          "n": 5,
+          "tpr": 0.0
+        },
+        "legacy:mpt": {
+          "n": 5,
+          "tpr": 0.2
+        },
+        "legacy:nemotron-3-super": {
+          "n": 4,
+          "tpr": 0.0
+        },
+        "legacy:gemma-4-31b": {
+          "n": 3,
+          "tpr": 0.0
+        },
+        "legacy:gpt-4.1": {
+          "n": 2,
+          "tpr": 0.0
+        },
+        "legacy:gpt-oss-20b": {
+          "n": 2,
+          "tpr": 0.0
+        },
+        "legacy:mistral-chat": {
+          "n": 2,
+          "tpr": 0.0
+        },
+        "legacy:nemotron-3-ultra": {
+          "n": 2,
+          "tpr": 0.0
+        },
+        "legacy:Claude Opus 4.5": {
+          "n": 1,
+          "tpr": 0.0
+        },
+        "legacy:Claude Sonnet 4.5": {
+          "n": 1,
+          "tpr": 0.0
+        },
+        "legacy:Gemini 3 Pro": {
+          "n": 1,
+          "tpr": 0.0
+        },
+        "legacy:deepseek-chat": {
+          "n": 1,
+          "tpr": 0.0
+        },
+        "legacy:mistral": {
+          "n": 1,
+          "tpr": 0.0
+        }
+      },
+      "domain": {
+        "academic": {
+          "n": 309,
+          "tpr": 0.058,
+          "fpr": 0.0175,
+          "auc": 0.7051
+        },
+        "other": {
+          "n": 242,
+          "tpr": 0.1374,
+          "fpr": 0.036,
+          "auc": 0.8116
+        },
+        "news": {
+          "n": 49,
+          "tpr": 0.1935,
+          "fpr": 0.0,
+          "auc": 0.8566
+        }
+      },
+      "attack": {
+        "none": {
+          "n": 391,
+          "tpr": 0.113,
+          "fpr": 0.014,
+          "auc": 0.7882
+        },
+        "paraphrase": {
+          "n": 45,
+          "tpr": 0.0667
+        },
+        "whitespace": {
+          "n": 43,
+          "tpr": 0.1333,
+          "fpr": 0.0357,
+          "auc": 0.8452
+        },
+        "homoglyph": {
+          "n": 42,
+          "tpr": 0.2222,
+          "fpr": 0.0833,
+          "auc": 0.6366
+        },
+        "typo": {
+          "n": 38,
+          "tpr": 0.0,
+          "fpr": 0.0,
+          "auc": 0.8338
+        },
+        "shuffle": {
+          "n": 29,
+          "tpr": 0.0714,
+          "fpr": 0.0667,
+          "auc": 0.7714
+        },
+        "mixed": {
+          "n": 12,
+          "tpr": 0.1667
+        }
+      }
+    },
+    "ci95": {
+      "roc_auc": [
+        0.7326653443641082,
+        0.8075084431872682
+      ],
+      "tpr_at_1fpr": [
+        0.006597455862091064,
+        0.1693493188675896
+      ],
+      "tpr_at_threshold": [
+        0.07514515514943841,
+        0.1464968152866242
+      ],
+      "human_fpr_at_threshold": [
+        0.006779661016949152,
+        0.040679825726582006
+      ]
+    },
+    "attribution_accuracy": 0.003389830508474576,
+    "mean_latency_ms": 283.36494954499926,
+    "file_size_mb": 150.103429
+  },
+  "int4": {
+    "label": "int4",
+    "n_holdout": 600,
+    "n_cal": 600,
+    "roc_auc": 0.9802111111111111,
+    "tpr_at_1fpr": 0.81,
+    "tpr_at_5fpr": 0.9133333333333333,
+    "platt_a": 2.2884660572511453,
+    "platt_b": 1.1221964299076364,
+    "optimal_threshold": 0.7501877149065594,
+    "target_human_fpr": 0.01,
+    "tpr_at_threshold": 0.8966666666666666,
+    "human_fpr_at_threshold": 0.04666666666666667,
+    "accuracy": 0.925,
+    "f1_score": 0.9228130360205832,
+    "ece": 0.026693503748729107,
+    "brier": 0.05249307235158048,
+    "esl_fpr": NaN,
+    "native_fpr": 0.04666666666666667,
+    "esl_disparate_impact_ratio": null,
+    "breakdown": {
+      "source": {
+        "legacy:coverage_test:coai_bench_arxiv": {
+          "n": 87,
+          "fpr": 0.092
+        },
+        "legacy:modern_train:hape_fiction_human": {
+          "n": 57,
+          "fpr": 0.0175
+        },
+        "legacy:train:raid_abstracts_none": {
+          "n": 30,
+          "tpr": 0.875,
+          "fpr": 0.0909,
+          "auc": 0.983
+        },
+        "legacy:modern_train:hape_spoken_ai": {
+          "n": 24,
+          "tpr": 0.9583
+        },
+        "legacy:modern_train:hape_blog_ai": {
+          "n": 22,
+          "tpr": 0.9545
+        },
+        "legacy:diverse_train:hape_spoken_human": {
+          "n": 19,
+          "fpr": 0.0
+        },
+        "legacy:modern_train:hape_news_ai": {
+          "n": 18,
+          "tpr": 1.0
+        },
+        "legacy:modern_train:hape_tv_movie_ai": {
+          "n": 18,
+          "tpr": 0.9444
+        },
+        "legacy:modern_train:hape_academic_ai": {
+          "n": 14,
+          "tpr": 0.9286
+        },
+        "legacy:coverage_test:ivypanda_essay": {
+          "n": 13,
+          "tpr": 0.9231
+        },
+        "legacy:modern_train:hape_fiction_ai": {
+          "n": 12,
+          "tpr": 0.9167
+        },
+        "legacy:diverse_train:arxiv_cond_human": {
+          "n": 11,
+          "fpr": 0.0909
+        },
+        "legacy:academic_train:arxiv_solv_human": {
+          "n": 10,
+          "fpr": 0.0
+        },
+        "legacy:modern_test:hape_news_human": {
+          "n": 10,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_gr_human": {
+          "n": 9,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_hep_ai": {
+          "n": 9,
+          "tpr": 0.8889
+        },
+        "legacy:diverse_train:arxiv_astro_human": {
+          "n": 9,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_adap_human": {
+          "n": 8,
+          "fpr": 0.125
+        },
+        "legacy:academic_train:arxiv_nlin_human": {
+          "n": 8,
+          "fpr": 0.125
+        },
+        "legacy:modern_test:hape_fiction_ai": {
+          "n": 8,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_news_ai": {
+          "n": 8,
+          "tpr": 1.0
+        },
+        "legacy:modern_val:hape_news_human": {
+          "n": 8,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_hep_human": {
+          "n": 7,
+          "fpr": 0.0
+        },
+        "legacy:train:hc3_wiki_csai_human": {
+          "n": 7,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_nucl_human": {
+          "n": 6,
+          "fpr": 0.0
+        },
+        "legacy:academic_train:arxiv_quant_ai": {
+          "n": 6,
+          "tpr": 0.8333
+        },
+        "legacy:diverse_train:arxiv_math_human": {
+          "n": 6,
+          "fpr": 0.0
+        },
+        "legacy:diverse_train:hape_spoken_ai": {
+          "n": 6,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_cond_ai": {
+          "n": 5,
+          "tpr": 0.8
+        },
+        "legacy:diverse_train:hape_blog_ai": {
+          "n": 5,
+          "tpr": 0.8
+        },
+        "legacy:modern_frontier_test:coai_arxiv_paraphrase": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_academic_ai": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_blog_ai": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:modern_test:hape_spoken_ai": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_astro_ai": {
+          "n": 4,
+          "tpr": 0.75
+        },
+        "legacy:diverse_train:hape_academic_ai": {
+          "n": 4,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_chao_ai": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_chem_ai": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_cmp_ai": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:academic_train:arxiv_patt_ai": {
+          "n": 3,
+          "tpr": 1.0
+        }
+      },
+      "generator": {
+        "human": {
+          "n": 300,
+          "fpr": 0.0467
+        },
+        "legacy:gpt-oss-120b": {
+          "n": 108,
+          "tpr": 0.8333
+        },
+        "legacy:gpt-4o": {
+          "n": 74,
+          "tpr": 0.9595
+        },
+        "legacy:llama-3-8b-instruct": {
+          "n": 73,
+          "tpr": 0.9452
+        },
+        "legacy:llama-3-13b-instruct": {
+          "n": 10,
+          "tpr": 0.9
+        },
+        "legacy:gpt-4o-mini": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:llama-3-70b-instruct": {
+          "n": 5,
+          "tpr": 1.0
+        },
+        "legacy:mpt": {
+          "n": 5,
+          "tpr": 0.8
+        },
+        "legacy:nemotron-3-super": {
+          "n": 4,
+          "tpr": 0.75
+        },
+        "legacy:gemma-4-31b": {
+          "n": 3,
+          "tpr": 1.0
+        },
+        "legacy:gpt-4.1": {
+          "n": 2,
+          "tpr": 1.0
+        },
+        "legacy:gpt-oss-20b": {
+          "n": 2,
+          "tpr": 0.5
+        },
+        "legacy:mistral-chat": {
+          "n": 2,
+          "tpr": 1.0
+        },
+        "legacy:nemotron-3-ultra": {
+          "n": 2,
+          "tpr": 0.5
+        },
+        "legacy:Claude Opus 4.5": {
+          "n": 1,
+          "tpr": 0.0
+        },
+        "legacy:Claude Sonnet 4.5": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:Gemini 3 Pro": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:deepseek-chat": {
+          "n": 1,
+          "tpr": 1.0
+        },
+        "legacy:mistral": {
+          "n": 1,
+          "tpr": 1.0
+        }
+      },
+      "domain": {
+        "academic": {
+          "n": 309,
+          "tpr": 0.8406,
+          "fpr": 0.0643,
+          "auc": 0.9608
+        },
+        "other": {
+          "n": 242,
+          "tpr": 0.9389,
+          "fpr": 0.027,
+          "auc": 0.9913
+        },
+        "news": {
+          "n": 49,
+          "tpr": 0.9677,
+          "fpr": 0.0,
+          "auc": 1.0
+        }
+      },
+      "attack": {
+        "none": {
+          "n": 391,
+          "tpr": 0.904,
+          "fpr": 0.0421,
+          "auc": 0.9768
+        },
+        "paraphrase": {
+          "n": 45,
+          "tpr": 0.7778
+        },
+        "whitespace": {
+          "n": 43,
+          "tpr": 0.9333,
+          "fpr": 0.0357,
+          "auc": 0.9952
+        },
+        "homoglyph": {
+          "n": 42,
+          "tpr": 1.0,
+          "fpr": 0.0833,
+          "auc": 0.9931
+        },
+        "typo": {
+          "n": 38,
+          "tpr": 0.9474,
+          "fpr": 0.0,
+          "auc": 1.0
+        },
+        "shuffle": {
+          "n": 29,
+          "tpr": 1.0,
+          "fpr": 0.1333,
+          "auc": 0.9857
+        },
+        "mixed": {
+          "n": 12,
+          "tpr": 0.8333
+        }
+      }
+    },
+    "ci95": {
+      "roc_auc": [
+        0.9701541138444125,
+        0.9891437075065983
+      ],
+      "tpr_at_1fpr": [
+        0.400663208742477,
+        0.873763445856469
+      ],
+      "tpr_at_threshold": [
+        0.8595317725752508,
+        0.9313759065269944
+      ],
+      "human_fpr_at_threshold": [
+        0.0258858052633222,
+        0.0726643598615917
+      ]
+    },
+    "attribution_accuracy": 0.6779661016949152,
+    "mean_latency_ms": 464.77685679166063,
+    "file_size_mb": 98.325812
+  },
+  "quantization": {
+    "int8": {
+      "ok": true,
+      "mb": 150.103429,
+      "matmul_integer_ops": 94
+    },
+    "int4": {
+      "ok": true,
+      "mb": 98.325812,
+      "mb_matmul_only": 214.371896,
+      "embeddings_int8": true,
+      "matmul_nbits_ops": 88
+    }
+  },
+  "drift": {
+    "int8": {
+      "rows": 200,
+      "max_abs_logit_diff": 10.94782042503357,
+      "mean_abs_logit_diff": 6.396967505067587,
+      "decision_flip_rate_at_fp32_threshold": 0.045
+    },
+    "int4": {
+      "rows": 200,
+      "max_abs_logit_diff": 1.751541018486023,
+      "mean_abs_logit_diff": 0.7017045838758349,
+      "decision_flip_rate_at_fp32_threshold": 0.015
+    },
+    "torch_vs_onnx_fp32": {
+      "rows": 200,
+      "max_abs_logit_diff": 0.0158388614654541
+    },
+    "onnx_length_parity": {
+      "max_abs_logit_diff": 9.47713851928711e-06,
+      "per_length": {
+        "16": 4.649162292480469e-06,
+        "64": 9.47713851928711e-06,
+        "200": 6.198883056640625e-06,
+        "512": 5.9604644775390625e-06
+      }
+    }
+  },
+  "torch_fp32_full_holdout": {
+    "label": "torch_fp32_full",
+    "n_holdout": 9882,
+    "n_cal": 921,
+    "roc_auc": 0.9843794683401338,
+    "tpr_at_1fpr": 0.8221859706362153,
+    "tpr_at_5fpr": 0.9211033664541005,
+    "platt_a": 1.5106671385165595,
+    "platt_b": 0.9180848588472827,
+    "optimal_threshold": 0.8293634212113813,
+    "target_human_fpr": 0.01,
+    "tpr_at_threshold": 0.90775619160611,
+    "human_fpr_at_threshold": 0.038228735266008285,
+    "accuracy": 0.9249139850232746,
+    "f1_score": 0.942852741836106,
+    "ece": 0.01039079503353687,
+    "brier": 0.0452227337813889,
+    "esl_fpr": NaN,
+    "native_fpr": 0.038228735266008285,
+    "esl_disparate_impact_ratio": null,
+    "breakdown": {
+      "source": {
+        "legacy:coverage_test:coai_bench_arxiv": {
+          "n": 829,
+          "fpr": 0.0808
+        },
+        "legacy:modern_train:hape_fiction_human": {
+          "n": 628,
+          "fpr": 0.0096
+        },
+        "legacy:modern_train:hape_spoken_ai": {
+          "n": 493,
+          "tpr": 0.9675
+        },
+        "legacy:modern_train:hape_blog_ai": {
+          "n": 410,
+          "tpr": 0.9585
+        },
+        "legacy:train:raid_abstracts_none": {
+          "n": 396,
+          "tpr": 0.9521,
+          "fpr": 0.036,
+          "auc": 0.9874
+        },
+        "legacy:modern_train:hape_fiction_ai": {
+          "n": 395,
+          "tpr": 0.9646
+        },
+        "legacy:modern_train:hape_academic_ai": {
+          "n": 370,
+          "tpr": 0.9216
+        },
+        "legacy:modern_train:hape_news_ai": {
+          "n": 342,
+          "tpr": 0.962
+        },
+        "legacy:modern_train:hape_tv_movie_ai": {
+          "n": 339,
+          "tpr": 0.944
+        },
+        "legacy:coverage_test:ivypanda_essay": {
+          "n": 282,
+          "tpr": 0.9858
+        },
+        "legacy:diverse_train:hape_spoken_human": {
+          "n": 216,
+          "fpr": 0.0
+        },
+        "legacy:modern_frontier_test:coai_arxiv_paraphrase": {
+          "n": 159,
+          "tpr": 0.9937
+        },
+        "legacy:modern_test:hape_news_human": {
+          "n": 138,
+          "fpr": 0.0072
+        },
+        "legacy:modern_test:hape_spoken_ai": {
+          "n": 134,
+          "tpr": 0.9851
+        },
+        "legacy:academic_train:arxiv_hep_ai": {
+          "n": 124,
+          "tpr": 0.7258
+        },
+        "legacy:academic_train:arxiv_astro_ai": {
+          "n": 122,
+          "tpr": 0.8607
+        },
+        "legacy:academic_train:arxiv_cond_ai": {
+          "n": 122,
+          "tpr": 0.8525
+        },
+        "legacy:academic_train:arxiv_hep_human": {
+          "n": 120,
+          "fpr": 0.025
+        },
+        "legacy:diverse_train:arxiv_cond_human": {
+          "n": 113,
+          "fpr": 0.0442
+        },
+        "legacy:modern_test:hape_blog_ai": {
+          "n": 108,
+          "tpr": 0.9722
+        },
+        "legacy:modern_test:hape_fiction_ai": {
+          "n": 106,
+          "tpr": 0.9811
+        },
+        "legacy:modern_test:hape_news_ai": {
+          "n": 103,
+          "tpr": 0.9709
+        },
+        "legacy:modern_test:hape_academic_ai": {
+          "n": 94,
+          "tpr": 0.9574
+        },
+        "legacy:train:hc3_wiki_csai_human": {
+          "n": 92,
+          "fpr": 0.1413
+        },
+        "legacy:academic_train:arxiv_cs_ai": {
+          "n": 84,
+          "tpr": 0.881
+        },
+        "legacy:diverse_train:arxiv_astro_human": {
+          "n": 84,
+          "fpr": 0.0476
+        },
+        "legacy:modern_val:hape_news_human": {
+          "n": 84,
+          "fpr": 0.0119
+        },
+        "legacy:diverse_train:hape_blog_ai": {
+          "n": 83,
+          "tpr": 0.8675
+        },
+        "legacy:diverse_train:hape_fiction_ai": {
+          "n": 82,
+          "tpr": 0.9146
+        },
+        "legacy:academic_train:arxiv_cmp_ai": {
+          "n": 80,
+          "tpr": 0.85
+        },
+        "legacy:academic_train:arxiv_gr_ai": {
+          "n": 77,
+          "tpr": 0.8701
+        },
+        "legacy:academic_train:arxiv_nlin_human": {
+          "n": 75,
+          "fpr": 0.0133
+        },
+        "legacy:academic_train:arxiv_physics_ai": {
+          "n": 75,
+          "tpr": 0.8267
+        },
+        "legacy:academic_train:arxiv_gr_human": {
+          "n": 74,
+          "fpr": 0.0
+        },
+        "legacy:diverse_train:hape_academic_ai": {
+          "n": 73,
+          "tpr": 0.863
+        },
+        "legacy:academic_train:arxiv_adap_ai": {
+          "n": 71,
+          "tpr": 0.9155
+        },
+        "legacy:academic_train:arxiv_nucl_human": {
+          "n": 71,
+          "fpr": 0.0
+        },
+        "legacy:diverse_train:hape_tv_movie_ai": {
+          "n": 71,
+          "tpr": 0.9577
+        },
+        "legacy:diverse_train:hape_news_ai": {
+          "n": 70,
+          "tpr": 0.8714
+        },
+        "legacy:academic_train:arxiv_adap_human": {
+          "n": 68,
+          "fpr": 0.0294
+        }
+      },
+      "generator": {
+        "human": {
+          "n": 3139,
+          "fpr": 0.0382
+        },
+        "legacy:gpt-oss-120b": {
+          "n": 2675,
+          "tpr": 0.8366
+        },
+        "legacy:gpt-4o": {
+          "n": 1494,
+          "tpr": 0.9813
+        },
+        "legacy:llama-3-8b-instruct": {
+          "n": 1470,
+          "tpr": 0.9388
+        },
+        "legacy:llama-3-13b-instruct": {
+          "n": 224,
+          "tpr": 0.9821
+        },
+        "legacy:llama-3-70b-instruct": {
+          "n": 164,
+          "tpr": 0.9024
+        },
+        "legacy:gpt-4o-mini": {
+          "n": 134,
+          "tpr": 0.9776
+        },
+        "legacy:mpt": {
+          "n": 123,
+          "tpr": 0.9756
+        },
+        "legacy:gpt-oss-20b": {
+          "n": 61,
+          "tpr": 0.8361
+        },
+        "legacy:nemotron-3-ultra": {
+          "n": 51,
+          "tpr": 0.8235
+        },
+        "legacy:gemma-4-31b": {
+          "n": 50,
+          "tpr": 0.86
+        },
+        "legacy:chatgpt": {
+          "n": 44,
+          "tpr": 0.9545
+        },
+        "legacy:nemotron-3-super": {
+          "n": 43,
+          "tpr": 0.8372
+        },
+        "legacy:mistral-7b-instruct": {
+          "n": 21,
+          "tpr": 1.0
+        },
+        "legacy:GPT-5.2": {
+          "n": 20,
+          "tpr": 0.95
+        },
+        "legacy:Claude Sonnet 4.5": {
+          "n": 19,
+          "tpr": 1.0
+        },
+        "legacy:anthropic/claude-haiku-4.5": {
+          "n": 19,
+          "tpr": 1.0
+        },
+        "legacy:deepseek-chat": {
+          "n": 19,
+          "tpr": 1.0
+        },
+        "legacy:gpt-4.1": {
+          "n": 18,
+          "tpr": 1.0
+        },
+        "legacy:Claude Opus 4.5": {
+          "n": 16,
+          "tpr": 1.0
+        },
+        "legacy:Gemini 3 Pro": {
+          "n": 13,
+          "tpr": 1.0
+        },
+        "legacy:mistral-chat": {
+          "n": 13,
+          "tpr": 1.0
+        },
+        "legacy:mpt-chat": {
+          "n": 11,
+          "tpr": 1.0
+        },
+        "legacy:openai/gpt-5-nano": {
+          "n": 10,
+          "tpr": 0.9
+        },
+        "legacy:google/gemini-3-flash-preview": {
+          "n": 9,
+          "tpr": 1.0
+        },
+        "legacy:gpt2": {
+          "n": 9,
+          "tpr": 0.6667
+        },
+        "legacy:llama-chat": {
+          "n": 7,
+          "tpr": 1.0
+        },
+        "legacy:mistral": {
+          "n": 6,
+          "tpr": 0.8333
+        }
+      },
+      "domain": {
+        "academic": {
+          "n": 4978,
+          "tpr": 0.8583,
+          "fpr": 0.053,
+          "auc": 0.9714
+        },
+        "other": {
+          "n": 4093,
+          "tpr": 0.9573,
+          "fpr": 0.0239,
+          "auc": 0.9921
+        },
+        "news": {
+          "n": 811,
+          "tpr": 0.9474,
+          "fpr": 0.009,
+          "auc": 0.9977
+        }
+      },
+      "attack": {
+        "none": {
+          "n": 6123,
+          "tpr": 0.9404,
+          "fpr": 0.0415,
+          "auc": 0.9902
+        },
+        "paraphrase": {
+          "n": 1073,
+          "tpr": 0.8733
+        },
+        "homoglyph": {
+          "n": 604,
+          "tpr": 0.9328,
+          "fpr": 0.0474,
+          "auc": 0.9904
+        },
+        "typo": {
+          "n": 600,
+          "tpr": 0.9218,
+          "fpr": 0.0131,
+          "auc": 0.9917
+        },
+        "whitespace": {
+          "n": 575,
+          "tpr": 0.9025,
+          "fpr": 0.0139,
+          "auc": 0.9893
+        },
+        "shuffle": {
+          "n": 528,
+          "tpr": 0.9394,
+          "fpr": 0.0455,
+          "auc": 0.9892
+        },
+        "mixed": {
+          "n": 379,
+          "tpr": 0.6121
+        }
+      }
+    },
+    "ci95": {
+      "roc_auc": [
+        0.9823232227382689,
+        0.9861553922107258
+      ],
+      "tpr_at_1fpr": [
+        0.8036971529732085,
+        0.8475650721620057
+      ],
+      "tpr_at_threshold": [
+        0.901084091853264,
+        0.914064926735833
+      ],
+      "human_fpr_at_threshold": [
+        0.031808459037109604,
+        0.04508640001985529
+      ]
+    }
+  },
+  "selection": {
+    "rule": "int4 only if ALLOW_INT4_SHIP and TPR@1%FPR loss<=0.015 and smaller than int8; else int8 if loss<=0.015; else fp32",
+    "allow_int4_ship": false,
+    "winner": "fp32",
+    "reason": "int4: not eligible (app ORT 1.15.1 lacks MatMulNBits; set ALLOW_INT4_SHIP=1 after upgrading the runtime); int8: rejected (TPR loss 0.7867, smaller=True)"
+  },
+  "app_selection": {
+    "variant": "int8_per_channel_constB_with_fp16_mlpWo",
+    "reason": "default int8 broke attention (AUC 0.77); weight-only per-channel int8 + fp16 mlp/Wo restores fp32 parity; int4 cannot load on ORT 1.15.1",
+    "size_mb": 170.1
+  }
+}

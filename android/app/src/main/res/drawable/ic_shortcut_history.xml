@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="34"
+    android:viewportHeight="34">
+    <!-- Full-bleed dark botanical green (no black border) -->
+    <path
+        android:fillColor="#FF10241E"
+        android:pathData="M0,0h34v34h-34z"/>
+    <!-- Enlarged icon group: 71% badge coverage for optimal launcher visibility -->
+    <group
+        android:translateX="5"
+        android:translateY="5">
+        <!-- Counter-Clockwise History Arc (Lucide history) in Crisp Cream Slate -->
+        <path
+            android:strokeColor="#FFF1F5F9"
+            android:strokeWidth="2.3"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M3.05,11a9,9 0 1,1 0.5,4m-0.5,4v-5h5"/>
+        <!-- Clock Hands in Luminous Botanical Teal -->
+        <path
+            android:strokeColor="#FF2DD4BF"
+            android:strokeWidth="2.6"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M12,6.5v5.5l3.5,2"/>
+        <!-- Center Pivot Dot in Radiant Mint -->
+        <path
+            android:fillColor="#FF5EEAD4"
+            android:pathData="M12,12m-1.2,0a1.2,1.2 0 1,0 2.4,0a1.2,1.2 0 1,0 -2.4,0"/>
+    </group>
+</vector>

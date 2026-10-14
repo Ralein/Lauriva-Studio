@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="34"
+    android:viewportHeight="34">
+    <!-- Full-bleed dark botanical green (no black border) -->
+    <path
+        android:fillColor="#FF10241E"
+        android:pathData="M0,0h34v34h-34z"/>
+    <!-- Enlarged icon group: 71% badge coverage for optimal launcher visibility -->
+    <group
+        android:translateX="5"
+        android:translateY="5">
+        <!-- Document Sheet Contour (Lucide file) in Crisp Cream Slate -->
+        <path
+            android:strokeColor="#FFF1F5F9"
+            android:strokeWidth="2.2"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M4,19.5V4.5A2.5,2.5 0 0,1 6.5,2H14.5L19.5,7V11"/>
+        <path
+            android:strokeColor="#FFF1F5F9"
+            android:strokeWidth="2.2"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M6.5,22H11"/>
+        <!-- Document Fold in Soft Slate -->
+        <path
+            android:strokeColor="#FF94A3B8"
+            android:strokeWidth="1.8"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M14.5,2v5h5"/>
+        <!-- Content Lines in Soft Sage -->
+        <path
+            android:strokeColor="#FF7CA982"
+            android:strokeWidth="1.8"
+            android:strokeLineCap="round"
+            android:pathData="M7,8h4M7,12h3"/>
+        <!-- Overlapping Forensic Search Glass in Luminous Botanical Teal -->
+        <path
+            android:strokeColor="#FF2DD4BF"
+            android:strokeWidth="2.4"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M16,16m-3.5,0a3.5,3.5 0 1,0 7,0a3.5,3.5 0 1,0 -7,0M18.5,18.5l3.5,3.5"/>
+    </group>
+</vector>
