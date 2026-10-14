@@ -3,11 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/toast_notification.dart';
 import '../providers/humanizer_provider.dart';
+import '../providers/llm_settings_provider.dart';
 import '../providers/speech_provider.dart';
 import '../providers/theme_provider.dart';
 import '../providers/toast_provider.dart';
 import '../widgets/header_bar.dart';
 import '../widgets/humanizer/comparison_view.dart';
+import '../widgets/humanizer/failover_alert_banner.dart';
 import '../widgets/humanizer/humanizer_input_section.dart';
 import '../widgets/humanizer/tone_style_selector.dart';
 import 'settings_screen.dart';
@@ -78,6 +80,7 @@ class _HumanizerScreenState extends State<HumanizerScreen> {
     } catch (_) {}
     final humanizer = Provider.of<HumanizerProvider?>(context);
     final speech = Provider.of<SpeechProvider?>(context);
+    final llmSettings = Provider.of<LlmSettingsProvider?>(context);
     final isLoading = humanizer?.isLoading ?? false;
     final isRecording = speech?.isRecording ?? false;
     final outputText = humanizer?.outputText ?? '';
@@ -107,7 +110,27 @@ class _HumanizerScreenState extends State<HumanizerScreen> {
                   );
                 },
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 12),
+
+              // Failover Session Alert Banner
+              if (llmSettings != null && llmSettings.hasPendingFailover)
+                FailoverAlertBanner(
+                  providerName: llmSettings.pendingFailoverProvider?.name ?? '',
+                  modelName: llmSettings.pendingFailoverModel ?? '',
+                  onSaveDefault: () async {
+                    final toast = Provider.of<ToastProvider?>(context, listen: false);
+                    await llmSettings.savePendingFailoverAsDefault();
+                    toast?.showToast(
+                      'Saved as default model.',
+                      ToastType.success,
+                    );
+                  },
+                  onDismiss: () {
+                    llmSettings.dismissPendingFailover();
+                  },
+                ),
+
+              const SizedBox(height: 6),
 
               // ── ZONE 1: Input Section ─────────────────────────────────────
               HumanizerInputSection(

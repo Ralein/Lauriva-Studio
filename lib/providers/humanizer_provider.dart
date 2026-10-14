@@ -259,13 +259,20 @@ class HumanizerProvider extends ChangeNotifier {
         throwOnLlmError: false,
         documentScorer: _detectorScorer(),
         onFailoverDetails: (fallbackProvider, fallbackModel, reason) async {
-          _toast.showToast(
-            'Failover: switched to ${fallbackProvider.name} ($fallbackModel) - $reason',
-            ToastType.info,
-          );
           await _llmSettings.adoptFailoverModel(
             provider: fallbackProvider,
             model: fallbackModel,
+            persistPermanently: false,
+          );
+          _toast.showToast(
+            'Failover: switched to ${fallbackProvider.name} ($fallbackModel) - $reason',
+            ToastType.info,
+            actionLabel: 'Save Default',
+            onAction: () async {
+              await _llmSettings.savePendingFailoverAsDefault();
+              _toast.showToast('Saved ${fallbackProvider.name} ($fallbackModel) as permanent default.', ToastType.success);
+            },
+            duration: const Duration(seconds: 6),
           );
           notifyListeners();
         },
